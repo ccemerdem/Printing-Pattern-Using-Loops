@@ -6,17 +6,17 @@ int main(){
     
     int a , b , step1=0;                    // First-half's    variables
     int c , d , x , y;                      //   Common        variables
-	int e , f , step2=1;                // Second-half's   variables
+    int e , f , step2=1;                    // Second-half's   variables
     
-	scanf("%d",&a);
+    scanf("%d",&a);
     
-	c=a;
+    c=a;
     y=a;
     x=a;
     
 // First Half 
     
-	for(;!(a==0);a--){                  // Main loop 
+   for(;!(a==0);a--){                  // Main loop 
      
        for(d=step1;!(d==0);d--){            // Loop for first digits
         printf("%d ",c);                    
@@ -36,23 +36,23 @@ int main(){
        }
     
 	c=y;
-    printf("\n");
+        printf("\n");
     
-	}
+    }
     
-	a=y;
+    a=y;
     c=y;
     
 // Second Half
 	
-	for(;!(a==1);a--){                  // Main loop
+   for(;!(a==1);a--){                  // Main loop
        
        for(d=a-1;!(d==1);d--){              // Loop for first digits
         printf("%d ",c);
         --c;
        } 
      
-	c=y;
+    c=y;
     ++step2;                                // Step count
       
        for(e=0;!(e==2*step2-1);e++){        // Loop for digits which are repeating
@@ -67,9 +67,9 @@ int main(){
      c=y;
      printf("\n");                             
      
-	 } 
+    } 
     
-	getch();
+    getch();
     return 0;
 }
 
