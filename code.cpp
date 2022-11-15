@@ -6,7 +6,7 @@ int main(){
     
     int a , b , step1=0;                    // First-half's    variables
     int c , d , x , y;                      //   Common        variables
-	int e , f , step2=1;                    // Second-half's   variables
+	int e , f , step2=1;                // Second-half's   variables
     
 	scanf("%d",&a);
     
@@ -16,7 +16,7 @@ int main(){
     
 // First Half 
     
-	for(;!(a==0);a--){                      // Main loop 
+	for(;!(a==0);a--){                  // Main loop 
      
        for(d=step1;!(d==0);d--){            // Loop for first digits
         printf("%d ",c);                    
@@ -24,7 +24,7 @@ int main(){
        }                                     
     
 	c=y;                                     
-	++step1;                                // Step count
+	++step1;                            // Step count
        
        for(b=0;!(b==2*a-1);b++){            // Loop for digits which are repeating (middle: 3 3 3 3 3 , 2 2 2 , (2n-1)) 
         printf("%d ",a);
@@ -45,7 +45,7 @@ int main(){
     
 // Second Half
 	
-	for(;!(a==1);a--){                      // Main loop
+	for(;!(a==1);a--){                  // Main loop
        
        for(d=a-1;!(d==1);d--){              // Loop for first digits
         printf("%d ",c);
