@@ -16,7 +16,7 @@ int main(){
     
 // First Half 
     
-   for(;!(a==0);a--){                  // Main loop 
+   for(;!(a==0);a--){                       // Main loop 
      
        for(d=step1;!(d==0);d--){            // Loop for first digits
         printf("%d ",c);                    
@@ -45,7 +45,7 @@ int main(){
     
 // Second Half
 	
-   for(;!(a==1);a--){                  // Main loop
+   for(;!(a==1);a--){                       // Main loop
        
        for(d=a-1;!(d==1);d--){              // Loop for first digits
         printf("%d ",c);
