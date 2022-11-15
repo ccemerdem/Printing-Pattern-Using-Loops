@@ -1,77 +1,74 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <math.h>
+#include <conio.h>
 
 int main(){
     
-    int a,b,c,e,f,t,d=0,x,z,step1=0,step2=1;
-    scanf("%d",&a);
-    c=a;
-    t=a;
+    int a , b , step1=0;                    // First-half's    variables
+    int c , d , x , y;                      //   Common        variables
+	int e , f , step2=1;                    // Second-half's   variables
+    
+	scanf("%d",&a);
+    
+	c=a;
+    y=a;
     x=a;
     
+// First Half 
     
-    for(;!(a==0);a--){           //first-half's loop
+	for(;!(a==0);a--){                      // Main loop 
      
-     for(;!(d==0);d--){          //loop for first digits
-       printf("%d ",c);
-       --c;
-     }
-       c=t;
-       ++step1;
-       d=step1;
+       for(d=step1;!(d==0);d--){            // Loop for first digits
+        printf("%d ",c);                    
+        --c;                                 
+       }                                     
+    
+	c=y;                                     
+	++step1;                                // Step count
        
-      for(b=0;!(b==2*a-1);b++){   //loop for digits which are repeating (middle: 3 3 3 3 3 , 2 2 2 , (2n-1)) 
+       for(b=0;!(b==2*a-1);b++){            // Loop for digits which are repeating (middle: 3 3 3 3 3 , 2 2 2 , (2n-1)) 
         printf("%d ",a);
-      }
+       }
       
-      for(;!(d==1);d--){          //loop for last digits
-       printf("%d ",c-(step1-2));
-       c++;
-      }
-      c=t;
-      d=step1;
-
-     printf("\n");
+       for(d=step1;!(d==1);d--){            // Loop for last digits
+        printf("%d ",c-(step1-2));
+        c++;
+       }
     
-    }
-    a=t;
-    c=t;
-    d=0;
-    x=0;
+	c=y;
+    printf("\n");
     
-    for(;!(a==1);a--){              // Second-half's loop
-          
-      d=a-1;
+	}
+    
+	a=y;
+    c=y;
+    
+// Second Half
+	
+	for(;!(a==1);a--){                      // Main loop
+       
+       for(d=a-1;!(d==1);d--){              // Loop for first digits
+        printf("%d ",c);
+        --c;
+       } 
      
-     for(;!(d==1);d--){          // loop for first digits
-       printf("%d ",c);
-       --c;
-     } 
-     c=t;
-     d=a-1;
-     x=d;
-     
-     ++step2;
-     z=step2;    
-     
-     for(e=0;!(e==2*z-1);e++){    // loop for digits which are repeating
+	c=y;
+    ++step2;                                // Step count
+      
+       for(e=0;!(e==2*step2-1);e++){        // Loop for digits which are repeating
         printf("%d ",step2);   
-     }
+       }
      
-     for(;!(x==1);x--){          // loop for last digits
-       printf("%d ",c-d+2);
-       ++c;
-     } 
+       for(x=a-1;!(x==1);x--){              // Loop for last digits
+        printf("%d ",c-(a-1)+2);
+        ++c;
+       } 
      
-     x=d;
-     c=t;
-     d=a-1;
+     c=y;
+     printf("\n");                             
+     
+	 } 
     
-     printf("\n");    
-     
-     }
-    system("pause");
+	getch();
     return 0;
 }
-
