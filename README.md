@@ -1,2 +1,2 @@
-# Printing-Pattern-Using-Loops
+# Printing Pattern Using Loops
 Solution for Hackerrank's 'Printing Pattern Using Loop' problem.
